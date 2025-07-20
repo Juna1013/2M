@@ -49,7 +49,7 @@ int main(void)
         apple2 = 0;
     }
 
-    if (res == 1 || apple == 3) {
+    if (res == 1 && apple == 3) {
         printf("2問連続正解！すごいですね！\n");
     }
 
@@ -72,7 +72,7 @@ int main(void)
         banana2 = 0;
     }
 
-    if (res == 1 || apple == 3 || banana == 3) {
+    if (res == 1 && apple == 3 && banana == 3) {
         printf("3問連続正解です！あと2問！\n");
     }
 
@@ -95,7 +95,7 @@ int main(void)
         coffee2 = 0;
     }
 
-    if (res == 1 || apple == 3 || banana == 3 || coffee == 2) {
+    if (res == 1 && apple == 3 && banana == 3 && coffee == 2) {
         printf("4問連続正解です！次がラストです！\n");
     }
 
@@ -110,7 +110,7 @@ int main(void)
 
     int dessrt2;
 
-    if (dessrt == 4) {
+    if (dessrt == 3) {
         printf("正解です！\n");
         dessrt2 = 1;
     } else {
@@ -119,33 +119,31 @@ int main(void)
     }
 
     int x;
+    x = res2 + apple2 + banana2 + coffee2 + dessrt2;
 
-    if (res2 + apple2 + banana2 + coffee2 + dessrt2 == x) {
-        printf("あなたの正解数は%d問です！\n", x);
-        if (x == 5) {
-            printf("全問正解！おめでとうございます！\n");
-            printf("ボーナスステージを楽しんでください！\n");
+    printf("あなたの正解数は%d問です！\n", x);
+      if (x == 5) {
+        printf("全問正解！おめでとうございます！\n");
+        printf("ボーナスステージを楽しんでください！\n");
 
-            /*ボーナス問題*/
-            printf("ボーナスステージへようこそ！\n");
-            printf("ボーナスクイズ：世界最古のアイドルが生まれたはどこのでしょう？\n");
+        /*ボーナス問題*/
+        printf("ボーナスステージへようこそ！\n");
+        printf("ボーナスクイズ：世界最古のアイドルが生まれたはどこのでしょう？\n");
 
-            int idor;
+        int idor;
 
-            printf("①韓国\n");
-            printf("②日本\n");
-            printf("③フランス\n");
-            printf("④中国\n");
+        printf("①韓国\n");
+        printf("②日本\n");
+        printf("③フランス\n");
+        printf("④中国\n");
 
-            if (idor == 4) {
-                printf("正解です！\n");
-                printf("全問正解おめでとうございます！\n");
-            }
+        if (idor == 4) {
+            printf("正解です！\n");
+            printf("全問正解おめでとうございます！\n");
         }
     } else {
         printf("お疲れ様でした！\n");
     }
-
     return 0;
 }
 
