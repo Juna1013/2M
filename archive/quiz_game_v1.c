@@ -1,3 +1,4 @@
+// 実際に提出した課題
 #include <stdio.h>
 
 int main(void)
